@@ -1,0 +1,31 @@
+﻿<Page
+    x:Class="DB_FINAL_PROJECT.Views.VIEW_CLASSPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:CommunityToolkit.WinUI.UI.Controls"
+    mc:Ignorable="d">
+
+    <Grid x:Name="ContentArea">
+        <StackPanel  x:Name="Visible1" HorizontalAlignment="Center" VerticalAlignment="Top" Visibility="Collapsed">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <AutoSuggestBox x:Name="cidText" Width="300" Text="C001" Header="Class id" PlaceholderText="Enter class id" TextChanged="Cid_TextChanged" QueryIcon="Find" Margin="0 0 0 30"/>
+            </StackPanel>
+            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Margin="0 0 0 40">
+                <controls:DataGrid x:Name="dataGrid" Width="1300" AutoGenerateColumns="False" GridLinesVisibility="Horizontal" CanUserSortColumns="False" CanUserReorderColumns="False" IsReadOnly="True" HeadersVisibility="Column" SelectionMode="Single">
+                    <controls:DataGrid.Columns>
+                        <controls:DataGridTextColumn Width="130" FontSize="15" Header="Student id" Binding="{Binding Studentid}" />
+                        <controls:DataGridTextColumn Width="130" FontSize="15" Header="Student name" Binding="{Binding Studentname}" />
+                        <controls:DataGridTextColumn Width="130" FontSize="15" Header="Gender" Binding="{Binding Gender}" />
+                        <controls:DataGridTextColumn Width="130" FontSize="15" Header="Registration date" Binding="{Binding Registrationdate}" />
+                        <controls:DataGridTextColumn Width="130" FontSize="15" Header="Fee status" Binding="{Binding Feestatus}" />
+                        <controls:DataGridTextColumn Width="130" FontSize="15" Header="Contact No" Binding="{Binding Contact}" />
+                        <controls:DataGridTextColumn Width="130" FontSize="15" Header="Blood group" Binding="{Binding Bloodgroup}" />
+                        <controls:DataGridTextColumn Width="130" FontSize="15" Header="Address" Binding="{Binding Address}" />
+                    </controls:DataGrid.Columns>
+                </controls:DataGrid>
+            </ScrollViewer>
+        </StackPanel>
+    </Grid>
+</Page>

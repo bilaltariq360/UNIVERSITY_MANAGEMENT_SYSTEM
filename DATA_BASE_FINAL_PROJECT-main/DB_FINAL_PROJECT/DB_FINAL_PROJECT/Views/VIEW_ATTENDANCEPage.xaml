@@ -1,0 +1,38 @@
+﻿<Page
+    x:Class="DB_FINAL_PROJECT.Views.VIEW_ATTENDANCEPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:CommunityToolkit.WinUI.UI.Controls"
+    mc:Ignorable="d">
+
+    <Grid x:Name="ContentArea" Visibility="Collapsed">
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top">
+            <TextBlock x:Name="tnameText" FontSize="25" FontWeight="Bold" Text="" HorizontalAlignment="Left"/>
+        </StackPanel>
+
+        <ScrollViewer>
+            <StackPanel>
+
+                <!--<StackPanel Orientation="Horizontal" Margin="12 0 12 12" HorizontalAlignment="Center">
+                    <AppBarButton Icon="Refresh" Label="Refresh" Click="RefreshButton_Click"/>
+                    <AppBarButton Icon="Edit" Label="Edit Row" Click="UpdateButton_Click"/>
+                    <AppBarButton Icon="View" Label="Credentials" Click="CredentialsButton_Click"/>
+                    </StackPanel>-->
+
+                <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Margin="0 0 0 40">
+                    <controls:DataGrid x:Name="dataGrid" Width="1000" AutoGenerateColumns="False" GridLinesVisibility="Horizontal" CanUserSortColumns="False" CanUserReorderColumns="False" IsReadOnly="True" HeadersVisibility="Column" SelectionMode="Single">
+                        <controls:DataGrid.Columns>
+                            <controls:DataGridTextColumn Width="200" FontSize="15" Header="Student id" Binding="{Binding Studentid}" />
+                            <controls:DataGridTextColumn Width="200" FontSize="15" Header="Name" Binding="{Binding Name}" />
+                            <controls:DataGridTextColumn Width="200" FontSize="15" Header="Total classes" Binding="{Binding Totalclasses}" />
+                            <controls:DataGridTextColumn Width="200" FontSize="15" Header="No. of classes attended" Binding="{Binding NOCattended}" />
+                            <controls:DataGridTextColumn Width="200" FontSize="15" Header="Percentage of classes" Binding="{Binding POclasses}" />
+                        </controls:DataGrid.Columns>
+                    </controls:DataGrid>
+                </ScrollViewer>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

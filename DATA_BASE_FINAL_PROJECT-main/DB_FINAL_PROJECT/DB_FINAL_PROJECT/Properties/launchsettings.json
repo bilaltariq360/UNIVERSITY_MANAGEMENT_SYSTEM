@@ -1,0 +1,10 @@
+﻿{
+    "profiles": {
+      "DB_FINAL_PROJECT (Package)": {
+        "commandName": "MsixPackage"
+      },
+      "DB_FINAL_PROJECT (Unpackaged)": {
+        "commandName": "Project"
+      }
+    }
+}

@@ -1,0 +1,18 @@
+﻿<Page
+    x:Class="DB_FINAL_PROJECT.Views.ADD_ATTENDANCEPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid x:Name="ContentArea">
+        <StackPanel x:Name="Visible1" Visibility="Collapsed" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <AutoSuggestBox x:Name="sidText" Width="300" Text="" Header="Student id" PlaceholderText="Enter student id" TextChanged="Sid_TextChanged" QueryIcon="Find" Margin="0 0 0 30"/>
+            <TextBox x:Name="TCText" Width="300" Header="Total classes" PlaceholderText="Enter total classes" FontSize="15" Margin="0 0 0 30"/>
+            <TextBox x:Name="ACText" Width="300" Header="Attended classes" PlaceholderText="Enter attended classes" FontSize="15" Margin="0 0 0 30"/>
+            <Button x:Name="Add" Width="300" Height="35" FontWeight="Bold" Content="Add" HorizontalAlignment="Center" Background="#505AC9" Foreground="#FFFFFF" Margin="0 0 0 50" Click="AddButton_Click"/>
+            <TeachingTip x:Name="Error" Title="Warning! ❌️" Subtitle="" Target="{x:Bind Add}"/>
+        </StackPanel>
+    </Grid>
+</Page>
